@@ -3,15 +3,15 @@ import { Link } from 'gatsby'
 
 class Navi extends React.Component {
   render() {
-    const { location, title } = this.props
+    const { location, title, logo } = this.props
     return (
-      <nav className="navbar navbar-expand navbar-dark flex-column flex-md-row bg-primary">
+      <nav className="navbar navbar-expand flex-column flex-md-row">
         <div className="container">
-          <Link className="text-center" to="/">
-            <h1 className="navbar-brand mb-0">{title}</h1>
+          <Link className="text-center navbar-brand" to="/">
+            <img src={logo} alt={title} />
           </Link>
           <div className="navbar-nav-scroll">
-            <ul className="navbar-nav bd-navbar-nav flex-row">
+            <ul className="navbar-nav bd-navbar-nav justify-content-end">
               <li
                 className={
                   location.pathname === '/' ? 'nav-item active' : 'nav-item'
@@ -34,7 +34,6 @@ class Navi extends React.Component {
               </li>
             </ul>
           </div>
-          <div className="navbar-nav flex-row ml-md-auto d-none d-md-flex" />
         </div>
       </nav>
     )

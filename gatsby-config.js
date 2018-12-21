@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatstrap',
-    description: 'Gatsby starter for bootstrap a blog',
-    siteUrl: 'https://gatstrap.netlify.com',
-    author: 'jaxx2104',
-    twitter: 'jaxx2104',
+    title: 'Arbor App',
+    description: 'An App to change the world',
+    siteUrl: 'https://arbor.netlify.com',
+    author: 'Culver Lau',
+    twitter: 'Culver Lau',
     adsense: '',
   },
   pathPrefix: '/',
@@ -50,23 +50,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatstrap',
-        short_name: 'Gatstrap',
-        description: 'Gatsby starter for bootstrap a blog',
-        homepage_url: 'https://gatstrap.netlify.com',
+        name: 'Arbor App',
+        short_name: 'Arbor',
+        description: 'An App to change the world',
+        homepage_url: 'https://arbor.netlify.com',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',
         display: 'standalone',
         icons: [
           {
-            src: '/img/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/img/android-chrome-512x512.png',
-            sizes: '512x512',
+            src: '/img/logo.png',
+            sizes: '500x500',
             type: 'image/png',
           },
         ],

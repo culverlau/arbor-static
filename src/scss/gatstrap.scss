@@ -81,10 +81,16 @@ p {
 }
 
 img {
-  margin-bottom: 15px;
   max-width: 100%;
+  height:auto;
 }
 
-img:hover {
-  animation: pulse 0.5s;
+.navbar {
+  background-color:#fff;
+  box-shadow:0px 1px 1px 1px rgba(0,0,0,.5);
+  .navbar-brand {
+    img {
+      width:150px;
+    }
+  }
 }

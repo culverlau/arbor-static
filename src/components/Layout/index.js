@@ -5,6 +5,7 @@ import Navi from 'components/Navi'
 import Footer from 'components/Footer'
 import { siteMetadata } from '../../../gatsby-config'
 
+import logo from '../../../content/images/arbor.jpg'
 import 'modern-normalize/modern-normalize.css'
 import 'prismjs/themes/prism.css'
 import 'scss/gatstrap.scss'
@@ -24,7 +25,7 @@ class Layout extends React.Component {
     const { children } = this.props
     return (
       <div>
-        <Navi title={siteMetadata.title} {...this.props} />
+        <Navi title={siteMetadata.title} logo={logo} {...this.props} />
         {children}
         <Footer title={siteMetadata.title} author={siteMetadata.author} />
       </div>

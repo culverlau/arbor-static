@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import get from 'lodash/get'
+import Img from 'gatsby-image'
 
 import Post from 'templates/Post'
 import Meta from 'components/Meta'
