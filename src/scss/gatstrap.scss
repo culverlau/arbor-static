@@ -86,8 +86,16 @@ img {
 }
 
 .navbar {
-  background-color:#fff;
-  box-shadow:0px 1px 1px 1px rgba(0,0,0,.5);
+  background-color:rgba(0,0,0,.4);
+  position:absolute;
+  top:0;
+  z-index:5;
+  width:100%;
+  &.navbar-fixed {
+    position:fixed;
+    background-color:#fff;
+    box-shadow:0px 1px 1px 1px rgba(0,0,0,.5);
+  }
   .navbar-brand {
     img {
       width:150px;
@@ -96,10 +104,19 @@ img {
 }
 
 .hero-section {
+  position:relative;
+  min-height:500px;
   figure {
-    img {
+    position:absolute;
+    width:100%;
+    height:100%;
+    .gatsby-image-wrapper {
       width:100%;
-      object-fit:cover;
+      height:100%;
     }
+  }
+  .hero-content {
+    padding:200px 100px 100px;
+    
   }
 }

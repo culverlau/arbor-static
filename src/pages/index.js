@@ -9,6 +9,25 @@ import Meta from 'components/Meta'
 import Layout from 'components/Layout'
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { height: 0 }
+    this.windowHeight = this.windowHeight.bind(this)
+  }
+
+  componentDidMount() {
+    this.windowHeight()
+    window.addEventListener('resize', this.windowHeight)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.windowHeight)
+  }
+
+  windowHeight() {
+    this.setState({ height: window.innerHeight })
+  }
+
   render() {
     const { location, data } = this.props
     const hero = get(data, 'hero.childImageSharp.fluid')
@@ -16,13 +35,18 @@ class Home extends React.Component {
     return (
       <Layout location={location}>
         <Meta site={siteMetadata} title="Home" />
-        <section className="hero-section">
+        <section className="hero-section" style={{ height: `${ this.state.height }px` }}>
           <figure>
             <Img fluid={hero} alt="" />
           </figure>
-          <div className="container-fluid">
+          <div className="container">
             <div className="row">
               <div className="col-sm-12">
+                <div className="hero-content">
+                  <h1>Show, Trade, Learn</h1>
+                  <h2>The home garde app for your community</h2>
+                  <button>Click to learn more</button>
+                </div>
               </div>
             </div>
           </div>
