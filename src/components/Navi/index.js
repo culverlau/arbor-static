@@ -5,7 +5,7 @@ class Navi extends React.Component {
   render() {
     const { location, title, logo } = this.props
     return (
-      <nav className="navbar navbar-expand flex-column flex-md-row">
+      <nav className="navbar navbar-expand navbar-fixed navbar-transparent flex-column flex-md-row">
         <div className="container">
           <Link className="text-center navbar-brand" to="/">
             <img src={logo} alt={title} />

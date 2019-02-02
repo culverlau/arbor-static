@@ -35,7 +35,10 @@ class Home extends React.Component {
     return (
       <Layout location={location}>
         <Meta site={siteMetadata} title="Home" />
-        <section className="hero-section" style={{ height: `${ this.state.height }px` }}>
+        <section
+          className="hero-section"
+          style={{ height: `${this.state.height}px` }}
+        >
           <figure>
             <Img fluid={hero} alt="" />
           </figure>
@@ -44,10 +47,19 @@ class Home extends React.Component {
               <div className="col-sm-12">
                 <div className="hero-content">
                   <h1>Show, Trade, Learn</h1>
-                  <h2>The home garde app for your community</h2>
-                  <button>Click to learn more</button>
+                  <h2>The home garden app for your community</h2>
+                  <a href="" class="btn">
+                    Click to learn more
+                  </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-12" />
             </div>
           </div>
         </section>
