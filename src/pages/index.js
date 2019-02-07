@@ -56,13 +56,43 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
+
         <section>
           <div className="container">
             <div className="row">
-              <div className="col-sm-12" />
+              <div className="col-sm-6 col-md-3">
+                <a href="">
+                  <div className="">
+                    <Img alt="" />
+                    <h3>Feature</h3>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </section>
+
+        <section>
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-12 col-md-6">
+                <div className="">
+                  <h3>Feature</h3>
+                  <p>some text here</p>
+                  <a href="" class="btn">
+                    Click to learn more
+                  </a>
+                </div>
+              </div>
+              <div className="col-sm-12 col-md-6">
+                <div className="">
+                  <Img alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </Layout>
     )
   }
